@@ -87,6 +87,8 @@ $scope.options = {
     placeholder: '',
     id: '', // input id, useful for labels
     name: '', // input name, useful for ng-messages or form validation
+    onFocus: [null, Function],
+    onBlur: [null, Function],
     close: {
         show: [false, true],
         label: 'Close',
