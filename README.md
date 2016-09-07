@@ -85,6 +85,8 @@ $scope.options = {
     case: ['upper', 'lower'],
     inline: [false, true],
     placeholder: '',
+    onFocus: [null, Function],
+    onBlur: [null, Function],
     close: {
         show: [false, true],
         label: 'Close',

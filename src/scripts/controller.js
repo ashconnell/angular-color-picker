@@ -358,10 +358,22 @@ export default class AngularColorPickerController {
         }
     }
 
+    onFocus (event) {
+        this.api.open(event);
+
+        if (this.options.onFocus) {
+            this.options.onFocus();
+        }
+    }
+
     onBlur (event) {
         if (this.ngModel !== this.onChangeValue) {
             this.updateModel = true;
             this.update();
+        }
+
+        if (this.options.onBlur) {
+            this.options.onBlur();
         }
 
         this.eventApiDispatch('onBlur', [event]);
